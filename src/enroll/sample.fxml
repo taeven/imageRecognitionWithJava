@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enroll.Controller">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="167.0" fitWidth="200.0" layoutX="375.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="captureButton" layoutX="441.0" layoutY="225.0" mnemonicParsing="false" onAction="#captureClick" text="capture" />
+      <Pane layoutX="410.0" layoutY="279.0" prefHeight="25.0" prefWidth="132.0">
+         <children>
+            <Label layoutX="4.0" layoutY="7.0" prefHeight="15.0" prefWidth="69.0" text="captured " />
+            <Label fx:id="captureCount" alignment="CENTER" layoutX="66.0" layoutY="7.0" prefHeight="15.0" prefWidth="17.0" text="0" textAlignment="CENTER" />
+            <Label layoutX="83.0" layoutY="7.0" prefHeight="15.0" prefWidth="40.0" text=" of 20" />
+         </children>
+      </Pane>
+      <Pane layoutX="5.0" layoutY="38.0" prefHeight="144.0" prefWidth="298.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="E-ID" />
+            <TextField fx:id="eId" layoutX="62.0" layoutY="9.0" prefHeight="25.0" prefWidth="223.0" />
+            <Button fx:id="enrollButton" layoutX="146.0" layoutY="47.0" mnemonicParsing="false" onAction="#enrollClick" text="Enroll" />
+            <Button layoutX="110.0" layoutY="93.0" mnemonicParsing="false" onAction="#trainImageSet" text="Train Recognizer" />
+         </children>
+      </Pane>
+      <Label layoutX="23.0" layoutY="175.0" prefHeight="116.0" prefWidth="298.0" />
+      <Label fx:id="status" alignment="CENTER" layoutX="76.0" layoutY="215.0" prefHeight="15.0" prefWidth="223.0" text="status" wrapText="true" />
+      <Button fx:id="clearButton" layoutX="420.0" layoutY="254.0" mnemonicParsing="false" onAction="#clearSelection" text="clear selection" />
+      <ProgressBar fx:id="progress" layoutX="77.0" layoutY="240.0" prefHeight="20.0" prefWidth="223.0" progress="0.0" />
+   </children>
+</AnchorPane>
